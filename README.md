@@ -4,7 +4,6 @@ Here you can find my Mineswweper.
 
 Front-End:   
              -> Bootstrap, Google Icons and some classical HTML CSS for the display
-
              -> Vanilla JS (OOP) for the core app 
              
 Back-End: 
