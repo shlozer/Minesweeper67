@@ -42,3 +42,4 @@ window.addEventListener('load', () =>{
 	$('.game_case').css('width', game_inner.offsetWidth / nb_columns_dis);		
 })
 
+// some comments
