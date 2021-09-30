@@ -13,7 +13,6 @@ var nb_mines_dis = document.getElementById('nb_mines_dis').innerHTML;
 nb_mines.addEventListener('change', () =>{
 	pct_mines.value =  
 	Math.round( 100 * nb_mines.value / (output_num1.innerHTML * output_num2.innerHTML));
-	// if (pct_mines.value > 100) 
 })
 
 pct_mines.addEventListener('change', () =>{
