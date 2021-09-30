@@ -2,8 +2,8 @@
 the best minesweeper for Elsassich lovers
 Here you can find my Mineswweper.
 
-Front-End:   Bootstrap, Google Icons and some classical HTML CSS for the display
-             Vanilla JS (OOP) for the core app 
+Front-End displaying: Bootstrap, Google Icons and some classical HTML CSS 
+Front-End core app: Vanilla JS (OOP)  
              
 Back-End:    PHP 7.4.9
 
