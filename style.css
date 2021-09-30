@@ -1,0 +1,113 @@
+body{
+		position: relative;
+		min-height: 100vw;
+}
+body::before{
+     	content: "";
+      background-image: url('img/broderie-rose-fond.png');
+      background-size: repeat;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.2;
+      z-index: -10;
+}
+
+section{
+	position: relative;
+	
+}
+/*#fond-général{
+	background: url('img/broderie-rose-fond.png') repeat;
+	opacity: 0.8;
+}*/
+@media screen and (max-width: 840px) {
+  #logo-haut-gauche {
+		display:  none;
+	}
+
+	  #logo-haut-droit {
+		display:  none;
+	}
+}
+
+#logo-haut-gauche {
+
+}
+
+#label_param{
+	font-size: 2.5rem;
+	font-weight: 350;
+}
+
+#arrow_downward_1, #arrow_downward_2{
+	font-size: 2.25rem;
+	transition: 1s;
+}
+#arrow_downward_1:hover{
+	transform: rotate(-90deg);
+}
+#arrow_downward_2:hover{
+	transform: rotate(90deg);
+}
+#form_param{
+	font-size: 1.3rem;
+}
+#output_num1, #output_num2{
+	font-size: 1.75rem;
+	font-weight: 600;
+}
+#taille_actual{
+	font-size: 2rem;
+	font-weight: 350;
+
+}
+#lines_game, #columns_game{
+	width: 300px;
+}
+#game_plan{
+	width: 90vw;
+	max-width: 800px;
+}
+#game_inner{
+	/*border: 1px solid black;*/
+}
+.line_game_plan{
+	margin: 0;
+	padding: 0;
+	/*display: flex;
+	flex-direction: row;*/
+
+}
+.game_case{
+	margin: 0;
+	padding: 0;
+	background-color: #373737;
+	border: 1px solid black;
+	max-width: 25px;
+	max-height: 25px;
+	cursor: pointer;
+	
+
+}
+.game_case_o{
+		background-color: #B8B8B8;
+		cursor: default;
+}
+.game_case_mine{
+		color: red;
+		font-weight: 600;
+		background-color: transparent !important;
+		background-image: url('img/mine_67_68_micro.png') !important;
+		z-index: 10;
+}
+.card-header{
+	/*background-color: transparent !important;*/
+}
+#label_loose{
+	font-size: 2rem;
+	font-weight: 350;
+
+}
