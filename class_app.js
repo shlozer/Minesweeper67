@@ -7,6 +7,7 @@ class Demineur{
 		this.first_click = false;
 		this.game_table = [];
 		this.cases_to_win = 0;
+		this.cases_open = 0;
 	}
 
 
@@ -42,57 +43,6 @@ class Demineur{
 
 	}
 
-	// loosingDisplay(){
-
-	// 	var div_loosing = document.createElement('DIV');
-	// 	div_loosing.id = 'label_loose';
-	// 	div_loosing.classList.add('text-center', 'mx-auto', 'text-danger');
-	// 	div_loosing.innerHTML = 'Perdu!!';
-	// 	document.getElementById('game_plan').appendChild(div_loosing);
-	// 	var div_new_game = document.createElement('DIV');
-	// 	div_new_game.id = 'new_game';
-	// 	div_new_game.classList.add('text-center', 'mx-auto' );
-	// 	// console.log(div_new_game);
-	// 	// console.log(document.getElementById('div_loosing'));
-	// 	document.getElementById('label_loose').appendChild(div_new_game);
-	// 	var btn_new_game = document.createElement('BUTTON');
-	// 	btn_new_game.id = 'btn_new_game';
-	// 	btn_new_game.innerHTML = 'retentez votre chance';
-	// 	document.getElementById('new_game').appendChild(btn_new_game);
-
-	// }
-
-	loosingDisplay(){
-
-		var div_loose = document.getElementById('label_loose');
-		div_loose.style.display = 'block' ;
-
-	}
-
-	// winningDisplay(){
-
-	// 	var div_winning = document.createElement('DIV');
-	// 	div_winning.id = 'label_win';
-	// 	div_winning.classList.add('text-center', 'mx-auto', 'text-danger');
-	// 	div_winning.innerHTML = 'Gagné!!';
-	// 	document.getElementById('game_plan').appendChild(div_winning);
-	// 	var div_new_game = document.createElement('DIV');
-	// 	div_new_game.id = 'new_game';
-	// 	div_new_game.classList.add('text-center', 'mx-auto' );
-	// 	document.getElementById('label_win').appendChild(div_new_game);
-	// 	var btn_new_game = document.createElement('BUTTON');
-	// 	btn_new_game.id = 'btn_new_game';
-	// 	btn_new_game.innerHTML = 'rejouez';
-	// 	document.getElementById('new_game').appendChild(btn_new_game);
-
-	// }
-
-	winningDisplay(){
-
-		var div_win = document.getElementById('label_win');
-		div_win.style.display = 'block' ;
-
-	}
 	gridEventsCreation (){
 		for (let i = 0; i< this.lines; i++) {
 	    for(let j = 0; j< this.columns; j++) {
@@ -103,6 +53,7 @@ class Demineur{
 	        		// console.log(this.lines, this.columns, this.nb_mines, i, j);
 	        		this.first_click = true;
 	        		this.gridCreation(i, j);
+	        		this.cases_open++;
 	        		// console.log(this.game_table);
 
 	        	}
@@ -116,6 +67,11 @@ class Demineur{
 
 	        		this.searchAlgo(i, j);
 
+	        	}
+
+	        	if (this.cases_open == this.cases_to_win) {
+	        		this.allCasesOpen();
+	        		this.winningDisplay();
 	        	}
 				// console.log(this.game_table[i][j]);
 	    	})
@@ -211,6 +167,20 @@ class Demineur{
 	}
 
 
+	loosingDisplay(){
+
+		var div_loose = document.getElementById('label_loose');
+		div_loose.style.display = 'block' ;
+
+	}
+
+	winningDisplay(){
+
+		var div_win = document.getElementById('label_win');
+		div_win.style.display = 'block' ;
+
+	}
+
 	searchAlgo(posx, posy){
 		// console.log(posx, posy, this.game_table [posx] [posy] [0], this.game_table [posx] [posy] [1]);
 
@@ -220,7 +190,7 @@ class Demineur{
 
 			document.getElementById('l' + posx + '_' + 'c' + posy).innerHTML = '&nbsp;';
 			document.getElementById('l' + posx + '_' + 'c' + posy).classList.add('game_case_o');
-
+			this.cases_open++;
 			// try  { if (game_table [posx - 1] [posy - 1] [0] == 0){searchAlgo(posx - 1, posy - 1);} } catch(err) {}
 			// try  { if (game_table [posx - 1] [posy    ] [0] == 0){searchAlgo(posx - 1, posy    );} } catch(err) {}
 			// try  { if (game_table [posx - 1] [posy + 1] [0] == 0){searchAlgo(posx - 1, posy + 1);} } catch(err) {}

@@ -98,7 +98,7 @@ section{
 }
 .game_case_mine{
 		color: red;
-		font-weight: 600;
+		font-weight: 700;
 		background-color: transparent !important;
 		background-image: url('img/mine_67_68_micro.png') !important;
 		z-index: 10;
