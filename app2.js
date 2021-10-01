@@ -7,8 +7,6 @@ var columns_game = document.getElementById('columns_game');
 var nb_lines_dis = document.getElementById('nb_lines_dis').innerHTML; 
 var nb_columns_dis = document.getElementById('nb_columns_dis').innerHTML; 
 var nb_mines_dis = document.getElementById('nb_mines_dis').innerHTML; 
-// var label_param = document.getElementById('label_param');
-// var game_table = document.getElementsByClassName('game_case');
 
 nb_mines.addEventListener('change', () =>{
 	pct_mines.value =  
@@ -32,9 +30,11 @@ columns_game.addEventListener('change', () =>{
 		
 })
 
-var game = new Demineur(nb_lines_dis, nb_columns_dis, nb_mines_dis);
-game.gridDisplayCreation();
-game.gridEventsCreation();
+if (nb_lines_dis != 0 && nb_columns_dis != 0 && nb_mines_dis != 0){
+		var game = new Demineur(nb_lines_dis, nb_columns_dis, nb_mines_dis);
+		game.gridDisplayCreation();
+		game.gridEventsCreation();
+}
 
 window.addEventListener('load', () =>{
 	var game_inner = document.getElementById('game_inner');

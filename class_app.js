@@ -12,10 +12,13 @@ class Demineur{
 
 	gridDisplayCreation (){
 
+		var div_parent = document.getElementById('game_plan');
+		var div_child = document.getElementById('label_loose');
 		var div_externe = document.createElement('DIV');
 		div_externe.id = 'game_inner';
 		div_externe.classList.add('text-center', 'mx-auto');
-		document.getElementById('game_plan').appendChild(div_externe);
+		div_parent.insertBefore(div_externe,div_child);
+		// document.getElementById('game_plan').appendChild(div_externe);
 
 
 		for (var i = 0; i < this.lines; i++) {
@@ -39,44 +42,57 @@ class Demineur{
 
 	}
 
+	// loosingDisplay(){
+
+	// 	var div_loosing = document.createElement('DIV');
+	// 	div_loosing.id = 'label_loose';
+	// 	div_loosing.classList.add('text-center', 'mx-auto', 'text-danger');
+	// 	div_loosing.innerHTML = 'Perdu!!';
+	// 	document.getElementById('game_plan').appendChild(div_loosing);
+	// 	var div_new_game = document.createElement('DIV');
+	// 	div_new_game.id = 'new_game';
+	// 	div_new_game.classList.add('text-center', 'mx-auto' );
+	// 	// console.log(div_new_game);
+	// 	// console.log(document.getElementById('div_loosing'));
+	// 	document.getElementById('label_loose').appendChild(div_new_game);
+	// 	var btn_new_game = document.createElement('BUTTON');
+	// 	btn_new_game.id = 'btn_new_game';
+	// 	btn_new_game.innerHTML = 'retentez votre chance';
+	// 	document.getElementById('new_game').appendChild(btn_new_game);
+
+	// }
+
 	loosingDisplay(){
 
-		var div_loosing = document.createElement('DIV');
-		div_loosing.id = 'label_loose';
-		div_loosing.classList.add('text-center', 'mx-auto', 'text-danger');
-		div_loosing.innerHTML = 'Perdu!!';
-		document.getElementById('game_plan').appendChild(div_loosing);
-		var div_new_game = document.createElement('DIV');
-		div_new_game.id = 'new_game';
-		div_new_game.classList.add('text-center', 'mx-auto' );
-		// console.log(div_new_game);
-		// console.log(document.getElementById('div_loosing'));
-		document.getElementById('label_loose').appendChild(div_new_game);
-		var btn_new_game = document.createElement('BUTTON');
-		btn_new_game.id = 'btn_new_game';
-		btn_new_game.innerHTML = 'retentez votre chance';
-		document.getElementById('new_game').appendChild(btn_new_game);
+		var div_loose = document.getElementById('label_loose');
+		div_loose.style.display = 'block' ;
 
 	}
+
+	// winningDisplay(){
+
+	// 	var div_winning = document.createElement('DIV');
+	// 	div_winning.id = 'label_win';
+	// 	div_winning.classList.add('text-center', 'mx-auto', 'text-danger');
+	// 	div_winning.innerHTML = 'Gagné!!';
+	// 	document.getElementById('game_plan').appendChild(div_winning);
+	// 	var div_new_game = document.createElement('DIV');
+	// 	div_new_game.id = 'new_game';
+	// 	div_new_game.classList.add('text-center', 'mx-auto' );
+	// 	document.getElementById('label_win').appendChild(div_new_game);
+	// 	var btn_new_game = document.createElement('BUTTON');
+	// 	btn_new_game.id = 'btn_new_game';
+	// 	btn_new_game.innerHTML = 'rejouez';
+	// 	document.getElementById('new_game').appendChild(btn_new_game);
+
+	// }
 
 	winningDisplay(){
 
-		var div_winning = document.createElement('DIV');
-		div_winning.id = 'label_win';
-		div_winning.classList.add('text-center', 'mx-auto', 'text-danger');
-		div_winning.innerHTML = 'Gagné!!';
-		document.getElementById('game_plan').appendChild(div_winning);
-		var div_new_game = document.createElement('DIV');
-		div_new_game.id = 'new_game';
-		div_new_game.classList.add('text-center', 'mx-auto' );
-		document.getElementById('label_win').appendChild(div_new_game);
-		var btn_new_game = document.createElement('BUTTON');
-		btn_new_game.id = 'btn_new_game';
-		btn_new_game.innerHTML = 'rejouez';
-		document.getElementById('new_game').appendChild(btn_new_game);
+		var div_win = document.getElementById('label_win');
+		div_win.style.display = 'block' ;
 
 	}
-
 	gridEventsCreation (){
 		for (let i = 0; i< this.lines; i++) {
 	    for(let j = 0; j< this.columns; j++) {

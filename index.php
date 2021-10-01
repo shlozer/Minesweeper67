@@ -92,28 +92,52 @@
             {
         ?>
 
-        <div class="text-primary text-center mb-3" id="taille_actual">
-            <?php echo
-            '<span id ="nb_lines_dis">'. 
-            $_POST['lines_game'].
-            '</span>'.
-            ' lignes X '.
-            '<span id ="nb_columns_dis">'.
-            $_POST['columns_game'].
-            '</span>'.
-            ' colonnes X '.
-            '<span id ="nb_mines_dis">'.
-            $_POST['mines_game'].
-            '</span>'.
-            ' mines' 
-            ?>  
-        </div>
+                <div class="text-primary text-center mb-3" id="taille_actual">
+                    <?php echo
+                    '<span id ="nb_lines_dis">'. 
+                    $_POST['lines_game'].
+                    '</span>'.
+                    ' lignes X '.
+                    '<span id ="nb_columns_dis">'.
+                    $_POST['columns_game'].
+                    '</span>'.
+                    ' colonnes X '.
+                    '<span id ="nb_mines_dis">'.
+                    $_POST['mines_game'].
+                    '</span>'.
+                    ' mines'; 
+                    ?>  
+                </div>
 
+        <?php
+            }else{
+        ?> 
+                <div class="text-primary text-center mb-3" id="taille_actual" style="display:none;">
+                    <span id ="nb_lines_dis">0</span> lignes X 
+                    <span id ="nb_columns_dis">0</span> colonnes X 
+                    <span id ="nb_mines_dis">0</span> mines
+                </div> 
         <?php
             }
         ?>            
 
+        <div id="label_loose" class="text-center mx-auto text-danger">
+            Perdu!!
+            <div id="new_game_loose" class="text-center mx-auto">
+                <button id="btn_new_game">
+                    retentez votre chance
+                </button>
+            </div>
+        </div>
 
+        <div id="label_win" class="text-center mx-auto text-danger">
+            Gagné!!
+            <div id="new_game_win" class="text-center mx-auto">
+                <button id="btn_new_game">
+                    voulez-vous rejouer?
+                </button>
+            </div>
+        </div>
     </section>
 
 

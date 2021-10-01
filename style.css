@@ -106,7 +106,8 @@ section{
 .card-header{
 	/*background-color: transparent !important;*/
 }
-#label_loose{
+#label_loose, #label_win{
+	display: none;
 	font-size: 2rem;
 	font-weight: 350;
 
