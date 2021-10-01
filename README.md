@@ -1,5 +1,6 @@
 # Minesweeper67
-the best minesweeper for Elsassich lovers
+The best minesweeper for Elsassich lovers.
+
 Here you can find my Mineswweper.
 
 Front-End displaying: Bootstrap, Google Icons and some classical HTML CSS 
