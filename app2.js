@@ -7,7 +7,8 @@ var columns_game = document.getElementById('columns_game');
 var nb_lines_dis = document.getElementById('nb_lines_dis').innerHTML; 
 var nb_columns_dis = document.getElementById('nb_columns_dis').innerHTML; 
 var nb_mines_dis = document.getElementById('nb_mines_dis').innerHTML; 
-
+var img_bg = document.getElementsByClassName('image_background');
+console.log(img_bg.length);
 nb_mines.addEventListener('change', () =>{
 	pct_mines.value =  
 	Math.round( 100 * nb_mines.value / (output_num1.innerHTML * output_num2.innerHTML));
@@ -36,9 +37,37 @@ if (nb_lines_dis != 0 && nb_columns_dis != 0 && nb_mines_dis != 0){
 		game.gridEventsCreation();
 }
 
+	var i_bg = 0;
+
+ function bg_display() {
+
+		try { 
+			if (img_bg[i_bg-1].classList.contains('img_bg_display')) {
+				img_bg[i_bg-1].classList.remove('img_bg_display');
+			}
+		} 
+		catch (err) {console.log(err);}
+
+		if (i_bg >= img_bg.length) {i_bg = 0;}
+
+		img_bg[i_bg].classList.add('img_bg_display');
+
+		i_bg++;
+
+}
+
 window.addEventListener('load', () =>{
 	var game_inner = document.getElementById('game_inner');
-	$('.game_case').css('width', game_inner.offsetWidth / nb_columns_dis);		
+	$('.game_case').css('width', game_inner.offsetWidth / nb_columns_dis);	
+
+	bg_display();
+
+	setInterval(() => {
+		bg_display();
+		},
+		3000);
+
 })
+
 
 // some comments

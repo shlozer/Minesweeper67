@@ -1,4 +1,4 @@
-class Demineur{
+class Demineur {
 
 	constructor(lines, columns, nb_mines){
 		this.lines = lines;
@@ -181,6 +181,8 @@ class Demineur{
 
 	}
 
+
+//here comes the big algo which find adjacent empty cases and open them
 	searchAlgo(posx, posy){
 		// console.log(posx, posy, this.game_table [posx] [posy] [0], this.game_table [posx] [posy] [1]);
 
