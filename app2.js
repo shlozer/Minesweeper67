@@ -5,10 +5,10 @@ var output_num2 = document.getElementById('output_num2');
 var lines_game = document.getElementById('lines_game');
 var columns_game = document.getElementById('columns_game');
 var nb_lines_dis = document.getElementById('nb_lines_dis').innerHTML; 
-var nb_columns_dis = document.getElementById('nb_columns_dis').innerHTML; 
+var nb_columns_dis = document.getElementById('nb_columns_dis').innerHTML  ?? 1; 
 var nb_mines_dis = document.getElementById('nb_mines_dis').innerHTML; 
 var img_bg = document.getElementsByClassName('image_background');
-console.log(img_bg.length);
+
 nb_mines.addEventListener('change', () =>{
 	pct_mines.value =  
 	Math.round( 100 * nb_mines.value / (output_num1.innerHTML * output_num2.innerHTML));
@@ -58,7 +58,20 @@ if (nb_lines_dis != 0 && nb_columns_dis != 0 && nb_mines_dis != 0){
 
 window.addEventListener('load', () =>{
 	var game_inner = document.getElementById('game_inner');
-	$('.game_case').css('width', game_inner.offsetWidth / nb_columns_dis);	
+
+	var game_inner_offsetWidth = 1;
+
+	if (game_inner === null) {} else { game_inner_offsetWidth = game_inner.offsetWidth;}
+
+	$('.game_case').css('width', game_inner_offsetWidth / nb_columns_dis);	
+
+
+        $("#settings_button").click(function(){
+        $("#settings_window").fadeToggle("fast");
+    });
+        $("#settings_button_mobile").click(function(){
+        $("#settings_window").fadeToggle("fast");
+    });
 
 	bg_display();
 

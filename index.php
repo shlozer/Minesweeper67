@@ -78,7 +78,7 @@
                 </div>
                 <div>
                   <div>
-                        <label for="mines_game">nombre de mines</label>
+                        <label for="mines_game"># de mines</label>
                         <input type="number" id="mines_game" name="mines_game" min="1" max="855" 
                         value="<?= isset($_POST['mines_game']) ? $_POST['mines_game'] : 15 ?>">          
                   </div>  
@@ -158,17 +158,9 @@
         </div>
     </section>
 
-<!-- </div> -->
-<!-- <script src="app.js"></script> -->
+
 <script type="text/javascript">
-    $(document).ready(function(){
-        $("#settings_button").click(function(){
-        $("#settings_window").fadeToggle("fast");
-    });
-        $("#settings_button_mobile").click(function(){
-        $("#settings_window").fadeToggle("fast");
-    });
-});
+
 </script>
 <script src="class_app.js"></script>
 <script src="app2.js"></script>
