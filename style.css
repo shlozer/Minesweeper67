@@ -1,6 +1,10 @@
+:root {
+  --bg_color_settings: #E0F1FF;
 
+}
 body{
 		min-height: 100vh;
+		overflow: hidden;
 }
 /*body::before{
      	content: "";
@@ -27,10 +31,7 @@ body{
 .img_bg_display{
 	opacity: 0.3;
 }
-:root {
-  --bg_color_settings: #E0F1FF;
 
-}
 section{
 	position: relative;
 	
@@ -57,7 +58,7 @@ h1{
 	}
 
 	#settings_window{
-		z-index: 10;
+		z-index: 50;
 		width: 75vw;
 		height: auto;
 		position: absolute;
@@ -99,8 +100,8 @@ h1{
 		color: black;
 	}
 	#settings_window{
-		z-index: 10;
-		width: 25vw;
+		z-index: 50;
+		width: 30vw;
 		height: auto;
 		position: absolute;
 		right: 2vw;
@@ -114,7 +115,7 @@ h1{
 		max-width: 65%;
 	}
 	#settings_window input[type=number]{
-		max-width: 20%;
+		max-width: 22%;
 	}
 	#label_lignes, #label_columns {
 		display: block;
@@ -199,8 +200,19 @@ h1{
 #label_loose, #label_win{
 	display: none;
 	font-size: 2rem;
-	font-weight: 350;
+	font-weight: 500;
+	animation-name: descale_labels_win_loose;
+  animation-duration: 0.8s;
+  z-index: 50;
 
 }
+@keyframes descale_labels_win_loose {
+  0%   {transform: scale(2,2);}
+  100% {transform: scale(1,1);}
+}
+#form_new_game_loss input[type=submit], #form_new_game_win input[type=submit]{
+	background-color: var(--bg_color_settings);
+	font-weight: 500;
 
+}
 

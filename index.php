@@ -2,7 +2,7 @@
 <html lang='fr'>
 <head>
     <meta name="viewport" content="width=device-width">
-    <title>demineur made in 67</title>
+    <title>demineur made in elssas</title>
     <meta charset="UTF-8">
     <meta name="description" content="test articles en js oop">
     <meta name="keywords" content="demineur alsace 67 bas-rhin mine">
@@ -36,7 +36,8 @@
 
         
         <h1 class="display-4  text-center text-danger ">
-            Démineur alsacien
+<!--             Démineur alsacien-->   
+                SweeperStub     
         </h1>
         <div id="settings_button">
                 
@@ -133,26 +134,26 @@
             }
         ?>            
 
-        <div id="label_loose" class="text-center mx-auto text-danger">
+        <div id="label_loose" class="text-center mx-auto text-danger mt-4">
             Perdu!!
-            <div id="" class="text-center mx-auto">
+            <div id="" class="text-center mx-auto mt-2">
                 <form action="#" method="post" id="form_new_game_loss">
                     <input type="hidden" id="lines_game" name="lines_game" value="<?= $_POST['lines_game']?>">
                     <input type="hidden" id="columns_game" name="columns_game" value="<?= $_POST['columns_game']?>">
                     <input type="hidden" id="mines_game" name="mines_game" value="<?= $_POST['mines_game']?>">
-                    <input class="text-success" type="submit" value="Retentez votre chance">
+                    <input class="text-primary" type="submit" value="Retentez votre chance">
                 </form>
             </div>
         </div>
 
-        <div id="label_win" class="text-center mx-auto text-success">
+        <div id="label_win" class="text-center mx-auto text-success mt-4">
             Gagné!!
-            <div id="" class="text-center mx-auto">
+            <div id="" class="text-center mx-auto mt-2">
                 <form action="#" method="post" id="form_new_game_win">
                     <input type="hidden" id="lines_game" name="lines_game" value="<?= $_POST['lines_game']?>">
                     <input type="hidden" id="columns_game" name="columns_game" value="<?= $_POST['columns_game']?>">
                     <input type="hidden" id="mines_game" name="mines_game" value="<?= $_POST['mines_game']?>">
-                    <input class="text-success" type="submit" value="Voulez-vous rejouer?">
+                    <input class="text-primary" type="submit" value="Rejouer?">
                 </form>
             </div>
         </div>
@@ -163,7 +164,7 @@
 
 </script>
 <script src="class_app.js"></script>
-<script src="app2.js"></script>
+<script src="app.js"></script>
 
 
 </body>

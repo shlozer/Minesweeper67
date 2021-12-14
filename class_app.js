@@ -53,9 +53,7 @@ class Demineur {
 	        		// console.log(this.lines, this.columns, this.nb_mines, i, j);
 	        		this.first_click = true;
 	        		this.gridCreation(i, j);
-	        		this.cases_open++;
-	        		// console.log(this.game_table);
-
+								console.log(this.cases_to_win);
 	        	}
 
 	        	if (this.game_table[i][j][1] == 'closed'){
@@ -66,6 +64,7 @@ class Demineur {
 	            	}
 
 	        		this.searchAlgo(i, j);
+	        		console.log(this.cases_open);
 
 	        	}
 
@@ -81,7 +80,7 @@ class Demineur {
 	}
 
 	gridCreation(posx, posy) {
-		let k = 1;
+		let k = 0;
 		  	
 	    for (let i = 0; i< this.lines; i++) {
 	            this.game_table[i] = [];
@@ -93,17 +92,17 @@ class Demineur {
 	        }
 	    }
 
-		while ( k <= this.nb_mines  ){
+		while ( k < this.nb_mines  ){
 
 			let x = Math.floor(Math.random() * this.lines);
 			let y = Math.floor(Math.random() * this.columns);
-			// console.log(x,y);
+			
 			if ( x != posx ||  y != posy){
 
 				if (this.game_table [x] [y] [0] != 9){
 					this.game_table [x] [y] [0] = 9;
 					k++;
-					// console.log('mine', k);
+					
 				}
 			}
 		}    
@@ -169,30 +168,26 @@ class Demineur {
 
 	loosingDisplay(){
 
-		var div_loose = document.getElementById('label_loose');
-		div_loose.style.display = 'block' ;
-
+		$("#label_loose").fadeIn("fast");
 	}
 
 	winningDisplay(){
 
-		var div_win = document.getElementById('label_win');
-		div_win.style.display = 'block' ;
-
+		$("#label_win").fadeIn("fast");
 	}
 
 
-//here comes the big algo which find adjacent empty cases and open them
+//here comes the big algo which find adjacent empty cases and open them (recursive func!!!)
 	searchAlgo(posx, posy){
 		// console.log(posx, posy, this.game_table [posx] [posy] [0], this.game_table [posx] [posy] [1]);
 
 		if (this.game_table [posx] [posy] [0] == 0 && this.game_table [posx] [posy] [1] == 'closed'){
 
 			this.game_table [posx] [posy] [1] = 'open';
-
+			this.cases_open++;
 			document.getElementById('l' + posx + '_' + 'c' + posy).innerHTML = '&nbsp;';
 			document.getElementById('l' + posx + '_' + 'c' + posy).classList.add('game_case_o');
-			this.cases_open++;
+			
 			// try  { if (game_table [posx - 1] [posy - 1] [0] == 0){searchAlgo(posx - 1, posy - 1);} } catch(err) {}
 			// try  { if (game_table [posx - 1] [posy    ] [0] == 0){searchAlgo(posx - 1, posy    );} } catch(err) {}
 			// try  { if (game_table [posx - 1] [posy + 1] [0] == 0){searchAlgo(posx - 1, posy + 1);} } catch(err) {}
@@ -215,7 +210,7 @@ class Demineur {
 			if (this.game_table [posx] [posy] [1] == 'closed'){
 
 				this.game_table [posx] [posy] [1] = 'open';
-
+				this.cases_open++;
 				if (this.game_table [posx] [posy] [0] > 0){
 					document.getElementById('l' + posx + '_' + 'c' + posy).innerHTML = this.game_table[posx][posy][0];
 				}else{
