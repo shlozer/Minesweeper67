@@ -57,6 +57,9 @@ if (nb_lines_dis != 0 && nb_columns_dis != 0 && nb_mines_dis != 0){
 }
 
 window.addEventListener('load', () =>{
+
+	pct_mines.value = Math.round( 100 * nb_mines.value / (output_num1.innerHTML * output_num2.innerHTML));
+	
 	var game_inner = document.getElementById('game_inner');
 
 	var game_inner_offsetWidth = 1;
