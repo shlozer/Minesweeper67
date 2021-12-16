@@ -32,25 +32,24 @@
     <img id ="bg_5" src="img/backgroundimage5.jpg" class="img-fluid image_background">
     <!-- <img id ="bg_6" src="img/backgroundimage6.jpg" class="img-fluid image_background"> -->
 
-    <section class=" d-flex justify-content-around" id="banniere_haut">
+    <section class=" d-flex justify-content-around container-fluid" id="banniere_haut">
 
+        <div id="settings_button_mobile" >
+            <span  id="settings_button_span_mobile"class="material-icons-outlined">menu</span>
+        </div>
         
         <h1 class="display-4  text-center text-danger ">
-<!--             Démineur alsacien-->   
                 SweeperStub     
         </h1>
+
         <div id="settings_button">
-                
             <span id="settings_button_span" class="material-icons-outlined">settings</span>
-        
         </div>
+
 
     </section >
 
     <section class="text-center mt-3" id="section_param" >
-        <div id="settings_button_mobile" >
-            <span  id="settings_button_span_mobile"class="material-icons-outlined">menu</span>
-        </div>
 
 
         <div id="settings_window" 
@@ -85,11 +84,11 @@
                   </div>  
                   <div class="mt-2">
                         <label for="pct_mines_game">% de mines</label>
-                        <input type="number" id="pct_mines_game" name="pct_mines_game" min="1" max="95" value="15">
+                        <input  type="number" id="pct_mines_game" name="pct_mines_game" min="1" max="95" value="15">
                   </div>
                 </div>
 
-              <input class="mt-3" type="submit" value="Démarrer">
+              <input class="mt-3 btn btn-outline-primary" type="submit" value="Démarrer">
             </form>    
         </div>
 
@@ -97,7 +96,7 @@
           
     </section>
 
-    <section class=" text-center mx-auto " id="game_plan">
+    <section class="container-fluid text-center mx-auto " id="game_plan">
         <?php 
             if ((isset($_POST['lines_game'])) &&
                 (isset($_POST['columns_game'])) &&
@@ -133,33 +132,36 @@
         <?php
             }
         ?>            
+        <div id="fin_game_plan"></div>
 
-        <div id="label_loose" class="text-center mx-auto text-danger mt-4">
-            Perdu!!
-            <div id="" class="text-center mx-auto mt-2">
-                <form action="#" method="post" id="form_new_game_loss">
-                    <input type="hidden" id="lines_game" name="lines_game" value="<?= $_POST['lines_game']?>">
-                    <input type="hidden" id="columns_game" name="columns_game" value="<?= $_POST['columns_game']?>">
-                    <input type="hidden" id="mines_game" name="mines_game" value="<?= $_POST['mines_game']?>">
-                    <input class="text-primary" type="submit" value="Retentez votre chance">
-                </form>
-            </div>
-        </div>
-
-        <div id="label_win" class="text-center mx-auto text-success mt-4">
-            Gagné!!
-            <div id="" class="text-center mx-auto mt-2">
-                <form action="#" method="post" id="form_new_game_win">
-                    <input type="hidden" id="lines_game" name="lines_game" value="<?= $_POST['lines_game']?>">
-                    <input type="hidden" id="columns_game" name="columns_game" value="<?= $_POST['columns_game']?>">
-                    <input type="hidden" id="mines_game" name="mines_game" value="<?= $_POST['mines_game']?>">
-                    <input class="text-primary" type="submit" value="Rejouer?">
-                </form>
-            </div>
-        </div>
     </section>
 
+<section id="labels_end" class="container-fluid">
+    
+    <div id="label_loose" class="container-fluid text-center mx-auto text-danger mt-4 px-3 pb-3">
+        Perdu!!
+        <div id="" class="text-center mx-auto mt-2">
+            <form action="#" method="post" id="form_new_game_loss">
+                <input type="hidden" id="lines_game" name="lines_game" value="<?= $_POST['lines_game']?>">
+                <input type="hidden" id="columns_game" name="columns_game" value="<?= $_POST['columns_game']?>">
+                <input type="hidden" id="mines_game" name="mines_game" value="<?= $_POST['mines_game']?>">
+                <input class="btn btn-outline-primary" type="submit" value="Retentez votre chance">
+            </form>
+        </div>
+    </div>
 
+    <div id="label_win" class="container-fluid text-center mx-auto text-success mt-4 px-3 pb-3">
+        Gagné!!
+        <div id="" class="text-center mx-auto mt-2">
+            <form action="#" method="post" id="form_new_game_win">
+                <input type="hidden" id="lines_game" name="lines_game" value="<?= $_POST['lines_game']?>">
+                <input type="hidden" id="columns_game" name="columns_game" value="<?= $_POST['columns_game']?>">
+                <input type="hidden" id="mines_game" name="mines_game" value="<?= $_POST['mines_game']?>">
+                <input class="btn btn-outline-primary" type="submit" value="Rejouer?">
+            </form>
+        </div>
+    </div>
+</section>
 <script type="text/javascript">
 
 </script>

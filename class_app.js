@@ -14,11 +14,11 @@ class Demineur {
 	gridDisplayCreation (){
 
 		var div_parent = document.getElementById('game_plan');
-		var div_child = document.getElementById('label_loose');
+		var fin_game_plan = document.getElementById('fin_game_plan');
 		var div_externe = document.createElement('DIV');
 		div_externe.id = 'game_inner';
 		div_externe.classList.add('text-center', 'mx-auto');
-		div_parent.insertBefore(div_externe,div_child);
+		div_parent.insertBefore(div_externe,fin_game_plan);
 		// document.getElementById('game_plan').appendChild(div_externe);
 
 
