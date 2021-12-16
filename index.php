@@ -79,12 +79,12 @@
                 <div>
                   <div>
                         <label for="mines_game"># de mines</label>
-                        <input type="number" id="mines_game" name="mines_game" min="1" max="855" 
+                        <input type="number" id="mines_game" name="mines_game" min="1" max="225" 
                         value="<?= isset($_POST['mines_game']) ? $_POST['mines_game'] : 15 ?>">          
                   </div>  
                   <div class="mt-2">
                         <label for="pct_mines_game">% de mines</label>
-                        <input  type="number" id="pct_mines_game" name="pct_mines_game" min="1" max="95" value="15">
+                        <input  type="number" id="pct_mines_game" name="pct_mines_game" min="1" max="25" value="15">
                   </div>
                 </div>
 
