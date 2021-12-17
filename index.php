@@ -165,7 +165,7 @@
     </div>
 </section>
 <footer class="">
-    <div class="text-center m-auto px-2 py-3" id="footer-wrapper">
+    <div class="text-center m-auto px-2 py-2" id="footer-wrapper">
         
         <div id="footer-text-contact">
             5 rue Stoeber 67000 Strasbourg FRANCE
