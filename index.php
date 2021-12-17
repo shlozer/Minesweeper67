@@ -2,11 +2,13 @@
 <html lang='fr'>
 <head>
     <meta name="viewport" content="width=device-width">
-    <title>demineur made in elssas</title>
+    <title>demineur made in elsass</title>
     <meta charset="UTF-8">
     <meta name="description" content="test articles en js oop">
-    <meta name="keywords" content="demineur alsace 67 bas-rhin mine">
+    <meta name="keywords" content="demineur alsace 67 bas-rhin mine minesweeper elsass haut-rhin elssas">
     <meta name="author" content="Chelomo ZERBIB">
+    <link rel="icon" type="image/x-icon" href="/img/mine_67_68_micro.png">
+
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     
     <link href="https://use.fontawesome.com/releases/v5.12.0/css/all.css" rel="stylesheet">
