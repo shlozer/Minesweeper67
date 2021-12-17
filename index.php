@@ -164,6 +164,17 @@
         </div>
     </div>
 </section>
+<footer class="">
+    <div class="text-center m-auto px-2 py-3" id="footer-wrapper">
+        
+        <div id="footer-text-contact">
+            5 rue Stoeber 67000 Strasbourg FRANCE
+        </div>
+        <div id="footer-text-copyright">
+            &copy; Copyright 2021 Shlomo ZERBIB
+        </div>
+    </div>
+ </footer>
 <script type="text/javascript">
 
 </script>
