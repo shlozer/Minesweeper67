@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="style.css">
 
 </head>
-<body class="container-fluid">
+<body class="container-fluid px-0 mx-0 text-center">
 
 <!-- <div id="background_wrapper"> -->
     <img id ="bg_1" src="img/backgroundimage1.jpg" class="img-fluid image_background">
@@ -136,28 +136,28 @@
 
     </section>
 
-<section id="labels_end" class="container-fluid">
+<section id="labels_end" class="">
     
-    <div id="label_loose" class="container-fluid text-center mx-auto text-danger mt-4 px-3 pb-3">
+    <div id="label_loose" class="text-center mx-auto text-danger mt-4 px-3 pb-3">
         Perdu!!
         <div id="" class="text-center mx-auto mt-2">
-            <form action="#" method="post" id="form_new_game_loss">
+            <form action="#" method="post" id="form_new_game_loss" class="container">
                 <input type="hidden" id="lines_game" name="lines_game" value="<?= $_POST['lines_game']?>">
                 <input type="hidden" id="columns_game" name="columns_game" value="<?= $_POST['columns_game']?>">
                 <input type="hidden" id="mines_game" name="mines_game" value="<?= $_POST['mines_game']?>">
-                <input class="btn btn-outline-primary" type="submit" value="Retentez votre chance">
+                <input class="btn btn-outline-primary text-wrap" type="submit" value="Retentez votre chance">
             </form>
         </div>
     </div>
 
-    <div id="label_win" class="container-fluid text-center mx-auto text-success mt-4 px-3 pb-3">
+    <div id="label_win" class="text-center mx-auto text-success mt-4 px-3 pb-3">
         Gagné!!
         <div id="" class="text-center mx-auto mt-2">
-            <form action="#" method="post" id="form_new_game_win">
+            <form action="#" method="post" id="form_new_game_win" class="container">
                 <input type="hidden" id="lines_game" name="lines_game" value="<?= $_POST['lines_game']?>">
                 <input type="hidden" id="columns_game" name="columns_game" value="<?= $_POST['columns_game']?>">
                 <input type="hidden" id="mines_game" name="mines_game" value="<?= $_POST['mines_game']?>">
-                <input class="btn btn-outline-primary" type="submit" value="Rejouer?">
+                <input class="btn btn-outline-primary text-wrap" type="submit" value="Rejouer?">
             </form>
         </div>
     </div>
