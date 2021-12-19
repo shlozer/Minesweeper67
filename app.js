@@ -8,6 +8,8 @@ var nb_lines_dis = document.getElementById('nb_lines_dis').innerHTML;
 var nb_columns_dis = document.getElementById('nb_columns_dis').innerHTML  ?? 1; 
 var nb_mines_dis = document.getElementById('nb_mines_dis').innerHTML; 
 var img_bg = document.getElementsByClassName('image_background');
+var i_bg = 0;
+
 
 nb_mines.addEventListener('change', () =>{
 	pct_mines.value =  
@@ -37,7 +39,46 @@ if (nb_lines_dis != 0 && nb_columns_dis != 0 && nb_mines_dis != 0){
 		game.gridEventsCreation();
 }
 
-	var i_bg = 0;
+
+function ajaxGet(url, callback) {
+    var req = new XMLHttpRequest();
+    req.open("GET", url);
+    req.addEventListener("load", function () {
+        if (req.status >= 200 && req.status < 400) {
+            callback(req.responseText);
+        } else {
+            console.error(req.status + " " + req.statusText + " " + url);
+        }
+    });
+    req.addEventListener("error", function () {
+        console.error("Erreur réseau avec l'URL " + url);
+    });
+    req.send(null);
+}
+
+function getPageUnsplash() {
+  if(typeof(Storage) !== "undefined") {
+		console.log('precedente page', sessionStorage.current_page_unsplash);
+		if (sessionStorage.current_page_unsplash){
+
+				if (Number(sessionStorage.current_page_unsplash) < 10){
+			 		 sessionStorage.current_page_unsplash = Number(sessionStorage.current_page_unsplash) + 1;
+			 		 
+				}else{
+					sessionStorage.current_page_unsplash = 1;
+				}
+
+	 		 console.log('ici1');
+		} 
+		else {
+		  	console.log('ici2');
+		  	sessionStorage.current_page_unsplash = 1;
+		}
+		console.log('actuelle page',sessionStorage.current_page_unsplash);
+		return sessionStorage.current_page_unsplash;
+	}
+	return 1;
+}
 
  function bg_display() {
 
@@ -58,6 +99,21 @@ if (nb_lines_dis != 0 && nb_columns_dis != 0 && nb_mines_dis != 0){
 
 window.addEventListener('load', () =>{
 
+  var pageUnsplash = getPageUnsplash();
+
+	ajaxGet("https://api.unsplash.com/search/photos?client_id=DnOxuuMPIm6X97RqHUf1_oRCoUM7YKJXQ210cbQh2s0&query=alsace&orientation=landscape&page=" 
+		+ pageUnsplash,
+		function(response){
+
+			listePhotos = JSON.parse(response);
+
+	    // console.log(listePhotos);
+			for (var i = 0; i < 10; i++) {
+				img_bg[i].setAttribute("src", listePhotos.results[i].urls.full);
+			}
+
+	});
+
 	pct_mines.value = Math.round( 100 * nb_mines.value / (output_num1.innerHTML * output_num2.innerHTML));
 	
 	var game_inner = document.getElementById('game_inner');
@@ -76,6 +132,7 @@ window.addEventListener('load', () =>{
  	 $("#settings_window").fadeToggle("fast");
 	});
 
+  
 	bg_display();
 
 	setInterval(() => {

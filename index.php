@@ -27,11 +27,22 @@
 <body class="container-fluid px-0 mx-0 text-center">
 
 <!-- <div id="background_wrapper"> -->
-    <img id ="bg_1" src="img/backgroundimage1.jpg" class="img-fluid image_background">
+<!--     <img id ="bg_1" src="img/backgroundimage1.jpg" class="img-fluid image_background">
     <img id ="bg_2" src="img/backgroundimage2.jpg" class="img-fluid image_background">
     <img id ="bg_3" src="img/backgroundimage3.jpg" class="img-fluid image_background">
     <img id ="bg_4" src="img/backgroundimage4.jpg" class="img-fluid image_background">
     <img id ="bg_5" src="img/backgroundimage5.jpg" class="img-fluid image_background">
+ -->    
+    <img id ="bg_1" src="" class="img-fluid image_background">
+    <img id ="bg_2" src="" class="img-fluid image_background">
+    <img id ="bg_3" src="" class="img-fluid image_background">
+    <img id ="bg_4" src="" class="img-fluid image_background">
+    <img id ="bg_5" src="" class="img-fluid image_background">
+    <img id ="bg_6" src="" class="img-fluid image_background">
+    <img id ="bg_7" src="" class="img-fluid image_background">
+    <img id ="bg_8" src="" class="img-fluid image_background">
+    <img id ="bg_9" src="" class="img-fluid image_background">
+    <img id ="bg_10" src="" class="img-fluid image_background">
     <!-- <img id ="bg_6" src="img/backgroundimage6.jpg" class="img-fluid image_background"> -->
 
     <section class=" d-flex justify-content-around container-fluid" id="banniere_haut">
