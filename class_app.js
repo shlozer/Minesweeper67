@@ -149,8 +149,6 @@ class Demineur {
 					document.getElementById('l' + i + '_' + 'c' + j).innerHTML = this.game_table[i][j][0] != 9 ? this.game_table[i][j][0] : null;
 					if (this.game_table [i] [j] [0] == 9){
 						document.getElementById('l' + i + '_' + 'c' + j).classList.add('game_case_mine');
-						// document.getElementById('l' + i + '_' + 'c' + j).style.color = 'red';
-						// document.getElementById('l' + i + '_' + 'c' + j).style.fontWeight = '600';
 					}
 
 				}else{

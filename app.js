@@ -131,8 +131,7 @@ window.addEventListener('load', () =>{
   $("#settings_button_mobile").click(function(){
  	 $("#settings_window").fadeToggle("fast");
 	});
-
-  
+	
 	bg_display();
 
 	setInterval(() => {

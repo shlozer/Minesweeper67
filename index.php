@@ -11,7 +11,8 @@
 
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     
-    <link href="https://use.fontawesome.com/releases/v5.12.0/css/all.css" rel="stylesheet">
+    <!-- <link href="https://use.fontawesome.com/releases/v5.12.0/css/all.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -26,13 +27,6 @@
 </head>
 <body class="container-fluid px-0 mx-0 text-center">
 
-<!-- <div id="background_wrapper"> -->
-<!--     <img id ="bg_1" src="img/backgroundimage1.jpg" class="img-fluid image_background">
-    <img id ="bg_2" src="img/backgroundimage2.jpg" class="img-fluid image_background">
-    <img id ="bg_3" src="img/backgroundimage3.jpg" class="img-fluid image_background">
-    <img id ="bg_4" src="img/backgroundimage4.jpg" class="img-fluid image_background">
-    <img id ="bg_5" src="img/backgroundimage5.jpg" class="img-fluid image_background">
- -->    
     <img id ="bg_1" src="" class="img-fluid image_background">
     <img id ="bg_2" src="" class="img-fluid image_background">
     <img id ="bg_3" src="" class="img-fluid image_background">
@@ -43,7 +37,6 @@
     <img id ="bg_8" src="" class="img-fluid image_background">
     <img id ="bg_9" src="" class="img-fluid image_background">
     <img id ="bg_10" src="" class="img-fluid image_background">
-    <!-- <img id ="bg_6" src="img/backgroundimage6.jpg" class="img-fluid image_background"> -->
 
     <section class=" d-flex justify-content-around container-fluid" id="banniere_haut">
 
@@ -65,12 +58,51 @@
     <section class="text-center mt-3" id="section_param" >
 
 
+      <div class="modal fade" id="myModal">
+        <div class="modal-dialog modal-dialog-centered" >
+          <div class="modal-content" >
+          
+            <div class="modal-header">
+              <h4 class="modal-title">Bienvenue sur le <span class="text-danger "id="site_title_modal">SweeperStub</span> un démineur authentique from Elsass</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            
+            <div class="modal-body">
+                <p>
+              Depuis vos bureaux de la Silicon Valley &#127976;&#128187; ou des steppes du Kazakhstan&#128002;&#127957;, détendez-vous et retrouvez l' unique ambiance alsacienne!!!&#127867;&#127968;
+                </p>
+                <p>
+              Une seule règle à connaitre: le numéro qui s'affiche sur une case est le nombre de mines présentes sur ses <span id="number8" alt="8">&#10129;</span> cases adjacentes.
+                </p>
+                <p>
+              Des améliorations&#128200; à nous soumettre? Un bug&#128375; qui vous dérange? N'hésitez pas à nous écrire&#128231; à <a href="mailto:shlozer@yahoo.fr">shlozer@yahoo.fr</a> 
+                </p> 
+               <p class="text-center">
+              Création: Chelomo ZERBIB  <a href="https://www.facebook.com/profile.php?id=100074091488256" class="fa fa_sm fa-facebook" target="_blank"></a>
+              <a href="https://www.linkedin.com/in/chelomo-zerbib-60737b127/" class="fa fa_sm fa-linkedin" target="_blank"></a><a href="https://github.com/shlozer/Minesweeper67" class="fa fa_sm fa-github" target="_blank"></a>
+
+                </p> 
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
         <div id="settings_window" 
             <?php
                 if ((isset($_POST['lines_game'])) && (isset($_POST['columns_game'])) &&
                     (isset($_POST['mines_game'])))
                     {echo 'style="display:none"';}
             ?>  >
+
+              <div type="button" class="" data-toggle="modal" data-target="#myModal" id="icon_info">
+                <span class="material-icons-outlined" >
+                    info
+                </span>
+              </div>
+
+
             <form action="#" method="post" class="text-center my-3 mb-0" id="form_param">
                 <div>
 
@@ -182,13 +214,11 @@
             5 rue Stoeber 67000 Strasbourg FRANCE
         </div>
         <div id="footer-text-copyright">
-            &copy; Copyright 2021 Shlomo ZERBIB
+            &copy; Copyright 2021 Chelomo ZERBIB
         </div>
     </div>
  </footer>
-<script type="text/javascript">
 
-</script>
 <script src="class_app.js"></script>
 <script src="app.js"></script>
 
