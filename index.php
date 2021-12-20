@@ -97,7 +97,7 @@
             ?>  >
 
               <div type="button" class="" data-toggle="modal" data-target="#myModal" id="icon_info">
-                <span class="material-icons-outlined" >
+                <span class="material-icons-outlined" id="icon_info_icon">
                     info
                 </span>
               </div>
