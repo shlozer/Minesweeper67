@@ -2,7 +2,7 @@
 <html lang='fr'>
 <head>
     <meta name="viewport" content="width=device-width">
-    <title>Démineur made in elsass</title>
+    <title>Démineur made in Elsass</title>
     <meta charset="UTF-8">
     <meta name="description" content="test articles en js oop">
     <meta name="keywords" content="demineur alsace 67 bas-rhin mine minesweeper elsass haut-rhin elssas">
