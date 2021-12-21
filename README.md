@@ -11,6 +11,6 @@ Front-End core app: Vanilla JS (OOP)
              
 Back-End:    PHP 7.4.9
 
-I'll adapt it to other regions and country in France and abroad so stay tuned !!
+I'll adapt it to other regions in France and countries abroad so stay tuned !!
 
 Bye Bye and Tschüß
