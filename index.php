@@ -81,7 +81,7 @@
                 </p> 
                <p class="text-center">
               Création: Chelomo ZERBIB  <a href="https://www.facebook.com/profile.php?id=100074091488256" class="fa fa_sm fa-facebook" target="_blank"></a>
-              <a href="https://www.linkedin.com/in/chelomo-zerbib-60737b127/" class="fa fa_sm fa-linkedin" target="_blank"></a><a href="https://github.com/shlozer/Minesweeper67" class="fa fa_sm fa-github" target="_blank"></a>
+              <a href="https://www.linkedin.com/in/chelomo-zerbib-60737b127/" class="fa fa_sm fa-linkedin" target="_blank"></a><a href="https://github.com/shlozer/Minesweeper67-SweeperStub" class="fa fa_sm fa-github" target="_blank"></a>
 
                 </p> 
 
