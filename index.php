@@ -220,7 +220,7 @@
     <div class="text-center m-auto px-2 py-2" id="footer-wrapper">
         
         <div id="footer-text-contact">
-            5 rue Stoeber 67000 Strasbourg FRANCE
+            5 rue Stoeber Strasbourg FRANCE
         </div>
         <div id="footer-text-copyright">
             &copy; Copyright 2021 Chelomo ZERBIB
