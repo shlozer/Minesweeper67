@@ -10,7 +10,8 @@ var nb_mines_dis = document.getElementById('nb_mines_dis').innerHTML;
 var img_bg = document.getElementsByClassName('image_background');
 var i_bg = 0;
 
-
+// mise a jour automatique du formulaire si changement d'un parametre
+//form updating on some parameters change
 nb_mines.addEventListener('change', () =>{
 	pct_mines.value =  
 	Math.round( 100 * nb_mines.value / (output_num1.innerHTML * output_num2.innerHTML));
@@ -32,14 +33,16 @@ columns_game.addEventListener('change', () =>{
 	Math.round( 100 * nb_mines.value / (output_num1.innerHTML * output_num2.innerHTML));
 		
 })
-
+// si données ok donc création du jeu
+// if the datas are ok so game creation
 if (nb_lines_dis != 0 && nb_columns_dis != 0 && nb_mines_dis != 0){
 		var game = new Demineur(nb_lines_dis, nb_columns_dis, nb_mines_dis);
 		game.gridDisplayCreation();
 		game.gridEventsCreation();
 }
 
-
+// fonction génériqe d'appel API
+// common API call func
 function ajaxGet(url, callback) {
     var req = new XMLHttpRequest();
     req.open("GET", url);
@@ -55,7 +58,8 @@ function ajaxGet(url, callback) {
     });
     req.send(null);
 }
-
+// gestion des images récupérée d'unsplash (avancer de 10 images par rafraichissement de la page)
+// management of images we get from Unsplash (going forward 10 images each refreshment)
 function getPageUnsplash() {
   if(typeof(Storage) !== "undefined") {
 		console.log('precedente page', sessionStorage.current_page_unsplash);
@@ -79,7 +83,8 @@ function getPageUnsplash() {
 	}
 	return 1;
 }
-
+// gestion du passage des fonds d ecran
+// Management of background image changing
  function bg_display() {
 
 		try { 
@@ -98,7 +103,8 @@ function getPageUnsplash() {
 }
 
 window.addEventListener('load', () =>{
-
+// récupération des images unsplash
+// Getting unsplah images
   var pageUnsplash = getPageUnsplash();
 
 	ajaxGet("https://api.unsplash.com/search/photos?client_id=DnOxuuMPIm6X97RqHUf1_oRCoUM7YKJXQ210cbQh2s0&query=alsace&orientation=landscape&page=" 
@@ -113,9 +119,11 @@ window.addEventListener('load', () =>{
 			}
 
 	});
-
+// pourcentage à mettre à jour au lancement 
+// Upadating mines percentage when page is loading
 	pct_mines.value = Math.round( 100 * nb_mines.value / (output_num1.innerHTML * output_num2.innerHTML));
-	
+// gestion de la largeur des cases	
+// cases width management
 	var game_inner = document.getElementById('game_inner');
 
 	var game_inner_offsetWidth = 1;
@@ -123,7 +131,8 @@ window.addEventListener('load', () =>{
 	if (game_inner === null) {} else { game_inner_offsetWidth = game_inner.offsetWidth;}
 
 	$('.game_case').css('width', game_inner_offsetWidth / nb_columns_dis);	
-
+// gestion de l'affichage des parametres
+// settings display management
   $("#settings_button").click(function(){
   	$("#settings_window").fadeToggle("fast");
 	});
@@ -132,6 +141,11 @@ window.addEventListener('load', () =>{
  	 $("#settings_window").fadeToggle("fast");
 	});
 	
+  $("#close_settings_button").click(function(){
+ 	 $("#settings_window").fadeToggle("fast");
+	});
+// pilotage du fonds d'écran animé
+// animation of the animated backgroung
 	bg_display();
 
 	setInterval(() => {

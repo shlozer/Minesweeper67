@@ -26,7 +26,8 @@
 
 </head>
 <body class="container-fluid px-0 mx-0 text-center">
-
+    <!-- images d'arriere plan enrichies par API Unsplash (merci à eux)-->
+    <!-- background images fed by Unsplash API (thank you guys) -->
     <img id ="bg_1" src="" class="img-fluid image_background">
     <img id ="bg_2" src="" class="img-fluid image_background">
     <img id ="bg_3" src="" class="img-fluid image_background">
@@ -57,7 +58,8 @@
 
     <section class="text-center mt-3" id="section_param" >
 
-
+<!-- modal d'informations générales-->
+<!-- generals infos modal -->
       <div class="modal fade" id="myModal">
         <div class="modal-dialog modal-dialog-centered" >
           <div class="modal-content" >
@@ -88,7 +90,8 @@
           </div>
         </div>
       </div>
-
+<!-- parametres de jeu (avec mise a jour automatique) -->
+<!-- game parameters with automatic update on change -->
         <div id="settings_window" 
             <?php
                 if ((isset($_POST['lines_game'])) && (isset($_POST['columns_game'])) &&
@@ -101,7 +104,9 @@
                     info
                 </span>
               </div>
-
+              <div id="close_settings_button">
+                <span type="button" class="close" >&times;</span>
+              </div>
 
             <form action="#" method="post" class="text-center my-3 mb-0" id="form_param">
                 <div>
@@ -148,7 +153,8 @@
                 (isset($_POST['mines_game'])))
             {
         ?>
-
+<!-- Parametres de  jeu actuels -->
+<!-- Current game parameters -->
                 <div class="text-primary text-center mb-3" id="taille_actual">
                     <?php echo
                     '<span id ="nb_lines_dis">'. 
@@ -176,13 +182,16 @@
                 </div> 
         <?php
             }
-        ?>            
+        ?>      
+        <!-- ici JS insert le jeu       -->
+        <!-- herre JS insert the whole game -->
         <div id="fin_game_plan"></div>
 
     </section>
 
 <section id="labels_end" class="">
-    
+    <!-- Pop-ups de résultat du jeu -->
+    <!-- game result pop-ups -->
     <div id="label_loose" class="text-center mx-auto text-danger mt-4 px-3 pb-3">
         Perdu!!
         <div id="" class="text-center mx-auto mt-2">

@@ -10,7 +10,8 @@ class Demineur {
 		this.cases_open = 0;
 	}
 
-
+// création des lignes et colonnes du jeu
+// creating game lines and columns 
 	gridDisplayCreation (){
 
 		var div_parent = document.getElementById('game_plan');
@@ -42,7 +43,16 @@ class Demineur {
 		}
 
 	}
-
+// Au premier clic on lance la création des mines puis on crées des evenements sur chaque case:
+// 	si case fermée on écoute le clic
+// 		si case avec mine => perdu
+// 		sinon recherche des cases vides aux alentours
+// 		gestion de partie gagnée
+// Mines creation at the first click then events creation on each and every case:
+// 		if case is closed so events listener:
+// 				if there is a mine you loose
+// 				else looking for empty cases around
+// at the end: winning game management
 	gridEventsCreation (){
 		for (let i = 0; i< this.lines; i++) {
 	    for(let j = 0; j< this.columns; j++) {
@@ -78,7 +88,10 @@ class Demineur {
 		}
 
 	}
-
+// Positionnement des mines au hasard
+// affichage des mines dans les cases adjacentes
+// random positioning
+// displaying mines on adjacent cases
 	gridCreation(posx, posy) {
 		let k = 0;
 		  	
@@ -116,6 +129,8 @@ class Demineur {
 	    this.cases_to_win = (this.lines * this.columns) - this.nb_mines;
 
 	}
+// calcul et affichage des mines dans les cases adjacentes
+// calculation and display of adjacent mines
 
 	searchAdjMinesCase(posx, posy){
 
@@ -135,7 +150,8 @@ class Demineur {
 
 		return adjMines;
 	}
-
+// ouverture et devoilement de toutes les cases (a l issue du jeu)
+// opening and unveiling all cases (at end of the game)
 	allCasesOpen(){
 
 		for (let i = 0; i< this.lines; i++) {
@@ -174,7 +190,7 @@ class Demineur {
 		$("#label_win").fadeIn("fast");
 	}
 
-
+// algorithme qui permets de chercher les cases adjacentes vides (si clic sur une case vide) (fonction recursive)
 //here comes the big algo which find adjacent empty cases and open them (recursive func!!!)
 	searchAlgo(posx, posy){
 		// console.log(posx, posy, this.game_table [posx] [posy] [0], this.game_table [posx] [posy] [1]);
