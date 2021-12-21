@@ -77,7 +77,7 @@
               Une seule règle à connaitre: le numéro qui s'affiche sur une case est le nombre de mines présentes sur ses <span id="number8" alt="8">&#10129;</span> cases adjacentes.
                 </p>
                 <p>
-              Des améliorations&#128200; à nous soumettre? Un bug&#128375; qui vous dérange? N'hésitez pas à nous écrire&#128231; à <a href="mailto:shlozer@yahoo.fr">shlozer@yahoo.fr</a> 
+              Des améliorations&#128200; à nous soumettre? Un bug&#128375; qui vous dérange? N'hésitez pas à nous écrire&#128231; à <a href="mailto:contact@sweeperstub.com">contact@sweeperstub.com</a> 
                 </p> 
                <p class="text-center">
               Création: Chelomo ZERBIB  <a href="https://www.facebook.com/profile.php?id=100074091488256" class="fa fa_sm fa-facebook" target="_blank"></a>
