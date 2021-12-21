@@ -3,7 +3,7 @@ The best minesweeper for Elsassich lovers.
 
 Here you can find my Mineswweper.
 
-Front-End displaying: Bootstrap, Google Icons and some classical HTML CSS 
+Front-End display: Bootstrap, Google Icons and some classical HTML5 CSS3 
 
 Background images: Unsplash API
 
