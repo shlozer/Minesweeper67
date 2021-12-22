@@ -63,7 +63,7 @@ class Demineur {
 	        		// console.log(this.lines, this.columns, this.nb_mines, i, j);
 	        		this.first_click = true;
 	        		this.gridCreation(i, j);
-								console.log(this.cases_to_win);
+								// console.log(this.cases_to_win);
 	        	}
 
 	        	if (this.game_table[i][j][1] == 'closed'){
@@ -74,7 +74,7 @@ class Demineur {
 	            	}
 
 	        		this.searchAlgo(i, j);
-	        		console.log(this.cases_open);
+	        		// console.log(this.cases_open);
 
 	        	}
 

@@ -60,24 +60,24 @@
 
 <!-- modal d'informations générales-->
 <!-- generals infos modal -->
-      <div class="modal fade" id="myModal">
+      <div class="modal fade" id="myModal" data-backdrop="false">
         <div class="modal-dialog modal-dialog-centered" >
           <div class="modal-content" >
           
             <div class="modal-header">
               <h4 class="modal-title">Bienvenue sur le <span class="text-danger "id="site_title_modal">SweeperStub</span> un démineur authentique from Elsass</h4>
-              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <span type="button" class="close" data-dismiss="modal">&times;</span>
             </div>
             
             <div class="modal-body">
                 <p>
-              Depuis vos bureaux de la Silicon Valley &#127976;&#128187; ou des steppes du Kazakhstan&#128002;&#127957;, détendez-vous et retrouvez l' unique ambiance alsacienne!!!&#127867;&#127968;
+              Depuis vos bureaux de la Silicon Valley <!-- &#127976; -->&#128187; ou des steppes du Kazakhstan<!-- &#128002; -->&#127957;, détendez-vous et retrouvez l' unique ambiance alsacienne!!!&#127867;&#127968;
                 </p>
                 <p>
               Une seule règle à connaitre: le numéro qui s'affiche sur une case est le nombre de mines présentes sur ses <span id="number8" alt="8">&#10129;</span> cases adjacentes.
                 </p>
                 <p>
-              Des améliorations&#128200; à nous soumettre? Un bug&#128375; qui vous dérange? N'hésitez pas à nous écrire&#128231; à <a href="mailto:contact@sweeperstub.com">contact@sweeperstub.com</a> 
+              Des améliorations&#128200; à nous soumettre? Un bug&#128375; qui vous dérange? N'hésitez pas à nous écrire<!-- &#128231; --> à <a href="mailto:contact@sweeperstub.com">contact@sweeperstub.com</a> 
                 </p> 
                <p class="text-center">
               Création: Chelomo ZERBIB  <a href="https://www.facebook.com/profile.php?id=100074091488256" class="fa fa_sm fa-facebook" target="_blank"></a>
@@ -220,10 +220,13 @@
     <div class="text-center m-auto px-2 py-2" id="footer-wrapper">
         
         <div id="footer-text-contact">
-            5 rue Stoeber Strasbourg FRANCE
+            Strasbourg FRANCE
+        </div>
+        <div id="footer-text-nom">
+             Chelomo ZERBIB
         </div>
         <div id="footer-text-copyright">
-            &copy; Copyright 2021 Chelomo ZERBIB
+             Copyright &copy; 2021 
         </div>
     </div>
  </footer>

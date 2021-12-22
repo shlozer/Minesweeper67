@@ -42,11 +42,7 @@ h1{
 	font-size: 6rem !important;
 }
 
-#form_param input[type=submit]{
-	font-weight: 500;
-	font-size: 2rem;
-	border-width: 3px;
-}
+
 
 @media screen and (max-width: 720px) {
 
@@ -122,6 +118,7 @@ h1{
 		background-color: var(--bg_color_settings);
 		border: 3px solid black;
 		border-radius: 15px;
+
 	}
 	#settings_window input[type=range]{
 		max-width: 65%;
@@ -159,11 +156,19 @@ h1{
 #close_settings_button span{
 	font-size: 2.5rem;
 }
+.modal-content{
+		border: 3px solid black;
+		border-radius: 15px;
+		background-color: var(--bg_color_settings);
+}
 #site_title_modal{
 	font-family: 'Cookie', cursive;
 	font-weight: 600 !important;
 	font-size: 2.8rem;
 	line-height: 0.55rem;
+}
+.modal-header span{
+	font-size: 2.5rem;
 }
 #number8{
 	color: blueviolet;
@@ -212,21 +217,14 @@ h1{
 	font-weight: 350;
 }
 
-#arrow_downward_1, #arrow_downward_2{
-	font-size: 2.25rem;
-	transition: 1s;
-}
-#arrow_downward_1:hover{
-	transform: rotate(-90deg);
-}
-#arrow_downward_2:hover{
-	transform: rotate(90deg);
-}
-.card-link:not(.collapsed) .rotate-icon {
-  transform: rotate(180deg);
-}
+
 #form_param{
 	font-size: 1.3rem;
+}
+#form_param input[type=submit]{
+	font-weight: 500;
+	font-size: 2rem;
+	border-width: 3px;
 }
 #output_num1, #output_num2{
 	font-size: 1.75rem;
@@ -266,11 +264,13 @@ h1{
 	width: 300px;
 }
 #game_plan{
-	width: 90vw;
+	width: 97vw;
 	max-width: 800px;
+	padding-right: 5px !important;
+	padding-left: 5px !important;
 }
 #game_inner{
-	/*border: 1px solid black;*/
+
 }
 .line_game_plan{
 	margin: 0;
@@ -301,11 +301,10 @@ h1{
 }
 }
 .game_case_mine{
-		color: red;
-		font-weight: 700;
 		background-color: transparent !important;
 		background-image: url('img/mine_67_68_micro.png') !important;
 		background-position: center;
+		background-size: cover;
 		z-index: 10;
 }
 #labels_end{
@@ -317,24 +316,25 @@ h1{
 }
 #label_loose, #label_win{
 	display: none;
-
+	opacity: 0.8;
 	/*position: relative;
 	left: -15px;*/
 	max-width: 595px;
 	background-color: var(--bg_color_settings);
-	border: 4px solid black;
+	border: 3px solid black;
 	border-radius: 15px;
 
 	font-size: 2rem ;
 	font-weight: 500;
 	animation-name: descale_labels_win_loose;
-  animation-duration: 0.8s;
-  
+  animation-duration: 0.5s;
+  animation-timing-function:ease;
 
 }
+
 @keyframes descale_labels_win_loose {
-  0%   {transform: scale(2,2);}
-  100% {transform: scale(1,1);}
+  0%   {transform: translateY(-50px);}
+  100% {transform: none;}
 }
 #form_new_game_loss input[type=submit], #form_new_game_win input[type=submit]{
 
@@ -351,7 +351,7 @@ footer {
   
 
 }
-@media screen and (max-width: 720px) {
+/*@media screen and (max-width: 720px) {
 
 
 footer {
@@ -362,7 +362,7 @@ footer {
   
   
 }
-}
+}*/
 
 
 #footer-wrapper{
@@ -375,15 +375,9 @@ footer {
 	border-radius: 10px;
 	
 }
-#footer-text-contact {
+#footer-text-contact, #footer-text-nom, #footer-text-copyright  {
     width: fit-content;
     height: 75%;
 }
 
-
-#footer-text-copyright {
-    width: fit-content;
-    height: 75%;
-
-}
 

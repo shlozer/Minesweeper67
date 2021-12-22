@@ -62,7 +62,7 @@ function ajaxGet(url, callback) {
 // management of images we get from Unsplash (going forward 10 images each refreshment)
 function getPageUnsplash() {
   if(typeof(Storage) !== "undefined") {
-		console.log('precedente page', sessionStorage.current_page_unsplash);
+		// console.log('precedente page', sessionStorage.current_page_unsplash);
 		if (sessionStorage.current_page_unsplash){
 
 				if (Number(sessionStorage.current_page_unsplash) < 10){
@@ -72,13 +72,13 @@ function getPageUnsplash() {
 					sessionStorage.current_page_unsplash = 1;
 				}
 
-	 		 console.log('ici1');
+	 		 // console.log('ici1');
 		} 
 		else {
-		  	console.log('ici2');
+		  	// console.log('ici2');
 		  	sessionStorage.current_page_unsplash = 1;
 		}
-		console.log('actuelle page',sessionStorage.current_page_unsplash);
+		// console.log('actuelle page',sessionStorage.current_page_unsplash);
 		return sessionStorage.current_page_unsplash;
 	}
 	return 1;
@@ -131,6 +131,8 @@ window.addEventListener('load', () =>{
 	if (game_inner === null) {} else { game_inner_offsetWidth = game_inner.offsetWidth;}
 
 	$('.game_case').css('width', game_inner_offsetWidth / nb_columns_dis);	
+	$('.game_case').css('height', game_inner_offsetWidth / nb_columns_dis);	
+	$('.game_case').css('line-height', `${Math.min((game_inner_offsetWidth / nb_columns_dis)-2, 24)}px`);	
 // gestion de l'affichage des parametres
 // settings display management
   $("#settings_button").click(function(){
