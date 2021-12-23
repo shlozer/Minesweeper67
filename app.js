@@ -103,10 +103,10 @@ function getPageUnsplash() {
 }
 
 window.addEventListener('load', () =>{
+
 // récupération des images unsplash
 // Getting unsplah images
   var pageUnsplash = getPageUnsplash();
-
 	ajaxGet("https://api.unsplash.com/search/photos?client_id=DnOxuuMPIm6X97RqHUf1_oRCoUM7YKJXQ210cbQh2s0&query=alsace&orientation=landscape&page=" 
 		+ pageUnsplash,
 		function(response){
@@ -125,14 +125,39 @@ window.addEventListener('load', () =>{
 // gestion de la largeur des cases	
 // cases width management
 	var game_inner = document.getElementById('game_inner');
+	var taille_actual = document.getElementById('taille_actual');
+	var footer = document.getElementsByTagName('footer');
 
 	var game_inner_offsetWidth = 1;
+	var game_inner_usable_offsetHeight = 1;
+	// console.log('taille_actual',taille_actual.offsetWidth);
+	// console.log('taille_actual',taille_actual.offsetHeight);
+	// console.log('game_inner',game_inner.offsetWidth);
+	// console.log('game_inner',game_inner.offsetHeight);
+	// console.log('game_plan',game_plan.offsetWidth);
+	// console.log('game_plan',game_plan.offsetHeight);
+	// console.log('footer',footer[0].offsetWidth);
+	// console.log('footer',footer[0].offsetHeight);
+	if (game_inner === null) {} 
+	else { 
+	// calcul des dimensions a prendre en compte pour les cotés du jeu
+	// computation of the dimensions to take in account for the game sides
+		game_inner_offsetWidth = game_inner.offsetWidth;
+		game_inner_usable_offsetHeight = 
+		Math.min(game_inner.offsetHeight, game_plan.offsetHeight - taille_actual.offsetHeight - footer[0].offsetHeight);
+	}
+	// console.log(game_inner_offsetWidth);
+	// console.log(game_inner_usable_offsetHeight);
+	// On prends la plus petite dimension et le plus grand nombre de cases par coté
+	// we choose the smallest dimension available and the bigger case number by side
+	var game_inner_side = Math.min(game_inner_offsetWidth, game_inner_usable_offsetHeight);
+	var max_direction = Math.max(nb_lines_dis, nb_columns_dis);
+	// console.log(game_inner_side);
+	// console.log(game_inner_side / max_direction);
+	$('.game_case').css('width', game_inner_side / max_direction);	
+	$('.game_case').css('height', game_inner_side / max_direction);	
+	$('.game_case').css('line-height', `${Math.min((game_inner_side / max_direction)-2, 24)}px`);	
 
-	if (game_inner === null) {} else { game_inner_offsetWidth = game_inner.offsetWidth;}
-
-	$('.game_case').css('width', game_inner_offsetWidth / nb_columns_dis);	
-	$('.game_case').css('height', game_inner_offsetWidth / nb_columns_dis);	
-	$('.game_case').css('line-height', `${Math.min((game_inner_offsetWidth / nb_columns_dis)-2, 24)}px`);	
 // gestion de l'affichage des parametres
 // settings display management
   $("#settings_button").click(function(){

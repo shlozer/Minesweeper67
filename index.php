@@ -26,18 +26,6 @@
 
 </head>
 <body class="container-fluid px-0 mx-0 text-center">
-    <!-- images d'arriere plan enrichies par API Unsplash (merci à eux)-->
-    <!-- background images fed by Unsplash API (thank you guys) -->
-    <img id ="bg_1" src="" class="img-fluid image_background">
-    <img id ="bg_2" src="" class="img-fluid image_background">
-    <img id ="bg_3" src="" class="img-fluid image_background">
-    <img id ="bg_4" src="" class="img-fluid image_background">
-    <img id ="bg_5" src="" class="img-fluid image_background">
-    <img id ="bg_6" src="" class="img-fluid image_background">
-    <img id ="bg_7" src="" class="img-fluid image_background">
-    <img id ="bg_8" src="" class="img-fluid image_background">
-    <img id ="bg_9" src="" class="img-fluid image_background">
-    <img id ="bg_10" src="" class="img-fluid image_background">
 
     <section class=" d-flex justify-content-around container-fluid" id="banniere_haut">
 
@@ -155,7 +143,7 @@
         ?>
 <!-- Parametres de  jeu actuels -->
 <!-- Current game parameters -->
-                <div class="text-primary text-center mb-3" id="taille_actual">
+                <div class="text-primary text-center mb-0 pb-3" id="taille_actual">
                     <?php echo
                     '<span id ="nb_lines_dis">'. 
                     $_POST['lines_game'].
@@ -216,7 +204,7 @@
         </div>
     </div>
 </section>
-<footer class="">
+<footer class="pt-3">
     <div class="text-center m-auto px-2 py-2" id="footer-wrapper">
         
         <div id="footer-text-contact">
@@ -230,6 +218,18 @@
         </div>
     </div>
  </footer>
+    <!-- images d'arriere plan enrichies par API Unsplash (merci à eux)-->
+    <!-- background images fed by Unsplash API (thank you guys) -->
+    <img id ="bg_1" src="" class="img-fluid image_background">
+    <img id ="bg_2" src="" class="img-fluid image_background">
+    <img id ="bg_3" src="" class="img-fluid image_background">
+    <img id ="bg_4" src="" class="img-fluid image_background">
+    <img id ="bg_5" src="" class="img-fluid image_background">
+    <img id ="bg_6" src="" class="img-fluid image_background">
+    <img id ="bg_7" src="" class="img-fluid image_background">
+    <img id ="bg_8" src="" class="img-fluid image_background">
+    <img id ="bg_9" src="" class="img-fluid image_background">
+    <img id ="bg_10" src="" class="img-fluid image_background">
 
 <script src="class_app.js"></script>
 <script src="app.js"></script>
