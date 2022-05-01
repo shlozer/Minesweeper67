@@ -59,7 +59,7 @@
             
             <div class="modal-body">
                 <p>
-              Depuis vos bureaux de la Silicon Valley <!-- &#127976; -->&#128187; ou des steppes du Kazakhstan<!-- &#128002; -->&#127957;, détendez-vous et retrouvez l' unique ambiance alsacienne!!!&#127867;&#127968;
+              Depuis vos bureaux de la Silicon Valley <!-- &#127976; -->&#128187; ou des dunes du Sahara<!-- &#128002; &#127957;-->&#127964;, détendez-vous et retrouvez l' unique ambiance alsacienne!!!&#127867;&#127968;
                 </p>
                 <p>
               Une seule règle à connaitre: le numéro qui s'affiche sur une case est le nombre de mines présentes sur ses <span id="number8" alt="8">&#10129;</span> cases adjacentes.
@@ -68,8 +68,8 @@
               Des améliorations&#128200; à nous soumettre? Un bug&#128375; qui vous dérange? N'hésitez pas à nous écrire<!-- &#128231; --> à <a href="mailto:contact@sweeperstub.com">contact@sweeperstub.com</a> 
                 </p> 
                <p class="text-center">
-              Création: Chelomo ZERBIB  <a href="https://www.facebook.com/profile.php?id=100074091488256" class="fa fa_sm fa-facebook" target="_blank"></a>
-              <a href="https://www.linkedin.com/in/chelomo-zerbib-60737b127/" class="fa fa_sm fa-linkedin" target="_blank"></a><a href="https://github.com/shlozer/Minesweeper67-SweeperStub" class="fa fa_sm fa-github" target="_blank"></a>
+              Création: Franck ZERBIB  <a href="https://www.facebook.com/profile.php?id=100074091488256" class="fa fa_sm fa-facebook" target="_blank"></a>
+              <a href="https://www.linkedin.com/in/franck-zerbib-60737b127/" class="fa fa_sm fa-linkedin" target="_blank"></a><a href="https://github.com/shlozer/Minesweeper67-SweeperStub" class="fa fa_sm fa-github" target="_blank"></a>
 
                 </p> 
 
@@ -211,7 +211,7 @@
             Strasbourg FRANCE
         </div>
         <div id="footer-text-nom">
-             Chelomo ZERBIB
+             Franck ZERBIB
         </div>
         <div id="footer-text-copyright">
              Copyright &copy; 2021 

@@ -201,15 +201,6 @@ class Demineur {
 			this.cases_open++;
 			document.getElementById('l' + posx + '_' + 'c' + posy).innerHTML = '&nbsp;';
 			document.getElementById('l' + posx + '_' + 'c' + posy).classList.add('game_case_o');
-			
-			// try  { if (game_table [posx - 1] [posy - 1] [0] == 0){searchAlgo(posx - 1, posy - 1);} } catch(err) {}
-			// try  { if (game_table [posx - 1] [posy    ] [0] == 0){searchAlgo(posx - 1, posy    );} } catch(err) {}
-			// try  { if (game_table [posx - 1] [posy + 1] [0] == 0){searchAlgo(posx - 1, posy + 1);} } catch(err) {}
-			// try  { if (game_table [posx    ] [posy - 1] [0] == 0){searchAlgo(posx    , posy - 1);} } catch(err) {}
-			// try  { if (game_table [posx    ] [posy + 1] [0] == 0){searchAlgo(posx    , posy + 1);} } catch(err) {}
-			// try  { if (game_table [posx + 1] [posy - 1] [0] == 0){searchAlgo(posx + 1, posy - 1);} } catch(err) {}
-			// try  { if (game_table [posx + 1] [posy    ] [0] == 0){searchAlgo(posx + 1, posy    );} } catch(err) {}
-			// try  { if (game_table [posx + 1] [posy + 1] [0] == 0){searchAlgo(posx + 1, posy + 1);} } catch(err) {}
 
 			try  { this.searchAlgo(posx - 1, posy - 1);}  catch(err) {}
 			try  { this.searchAlgo(posx - 1, posy    );}  catch(err) {}
@@ -246,15 +237,6 @@ class Demineur {
 				this.cases_open++;
 				document.getElementById('l' + posx + '_' + 'c' + posy).innerHTML = '&nbsp;';
 				document.getElementById('l' + posx + '_' + 'c' + posy).classList.add('game_case_o');
-				
-				// try  { if (game_table [posx - 1] [posy - 1] [0] == 0){searchAlgo(posx - 1, posy - 1);} } catch(err) {}
-				// try  { if (game_table [posx - 1] [posy    ] [0] == 0){searchAlgo(posx - 1, posy    );} } catch(err) {}
-				// try  { if (game_table [posx - 1] [posy + 1] [0] == 0){searchAlgo(posx - 1, posy + 1);} } catch(err) {}
-				// try  { if (game_table [posx    ] [posy - 1] [0] == 0){searchAlgo(posx    , posy - 1);} } catch(err) {}
-				// try  { if (game_table [posx    ] [posy + 1] [0] == 0){searchAlgo(posx    , posy + 1);} } catch(err) {}
-				// try  { if (game_table [posx + 1] [posy - 1] [0] == 0){searchAlgo(posx + 1, posy - 1);} } catch(err) {}
-				// try  { if (game_table [posx + 1] [posy    ] [0] == 0){searchAlgo(posx + 1, posy    );} } catch(err) {}
-				// try  { if (game_table [posx + 1] [posy + 1] [0] == 0){searchAlgo(posx + 1, posy + 1);} } catch(err) {}
 
 				try  { this.searchAlgo(posx - 1, posy - 1);}  catch(err) {}
 				try  { this.searchAlgo(posx - 1, posy    );}  catch(err) {}
