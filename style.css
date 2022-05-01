@@ -290,7 +290,7 @@ h1{
 	max-height: 25px;
 	cursor: pointer;
 	color: black;
-
+	transition: background-color 300ms;
 }
 .game_case_o{
 		/*background-color: #B8B8B8;*/

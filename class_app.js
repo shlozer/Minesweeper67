@@ -192,7 +192,7 @@ class Demineur {
 
 // algorithme qui permets de chercher les cases adjacentes vides (si clic sur une case vide) (fonction recursive)
 //here comes the big algo which find adjacent empty cases and open them (recursive func!!!)
-	searchAlgo(posx, posy){
+	searchAlgo2(posx, posy){
 		// console.log(posx, posy, this.game_table [posx] [posy] [0], this.game_table [posx] [posy] [1]);
 
 		if (this.game_table [posx] [posy] [0] == 0 && this.game_table [posx] [posy] [1] == 'closed'){
@@ -237,7 +237,50 @@ class Demineur {
 
 	}
 
+	searchAlgo(posx, posy){
+		// console.log(posx, posy, this.game_table [posx] [posy] [0], this.game_table [posx] [posy] [1]);
+		if (this.game_table [posx] [posy] [1] == 'closed'){
+			if (this.game_table [posx] [posy] [0] == 0 ){
 
+				this.game_table [posx] [posy] [1] = 'open';
+				this.cases_open++;
+				document.getElementById('l' + posx + '_' + 'c' + posy).innerHTML = '&nbsp;';
+				document.getElementById('l' + posx + '_' + 'c' + posy).classList.add('game_case_o');
+				
+				// try  { if (game_table [posx - 1] [posy - 1] [0] == 0){searchAlgo(posx - 1, posy - 1);} } catch(err) {}
+				// try  { if (game_table [posx - 1] [posy    ] [0] == 0){searchAlgo(posx - 1, posy    );} } catch(err) {}
+				// try  { if (game_table [posx - 1] [posy + 1] [0] == 0){searchAlgo(posx - 1, posy + 1);} } catch(err) {}
+				// try  { if (game_table [posx    ] [posy - 1] [0] == 0){searchAlgo(posx    , posy - 1);} } catch(err) {}
+				// try  { if (game_table [posx    ] [posy + 1] [0] == 0){searchAlgo(posx    , posy + 1);} } catch(err) {}
+				// try  { if (game_table [posx + 1] [posy - 1] [0] == 0){searchAlgo(posx + 1, posy - 1);} } catch(err) {}
+				// try  { if (game_table [posx + 1] [posy    ] [0] == 0){searchAlgo(posx + 1, posy    );} } catch(err) {}
+				// try  { if (game_table [posx + 1] [posy + 1] [0] == 0){searchAlgo(posx + 1, posy + 1);} } catch(err) {}
+
+				try  { this.searchAlgo(posx - 1, posy - 1);}  catch(err) {}
+				try  { this.searchAlgo(posx - 1, posy    );}  catch(err) {}
+				try  { this.searchAlgo(posx - 1, posy + 1);}  catch(err) {}
+				try  { this.searchAlgo(posx    , posy - 1);}  catch(err) {}
+				try  { this.searchAlgo(posx    , posy + 1);}  catch(err) {}
+				try  { this.searchAlgo(posx + 1, posy - 1);}  catch(err) {}
+				try  { this.searchAlgo(posx + 1, posy    );}  catch(err) {}
+				try  { this.searchAlgo(posx + 1, posy + 1);}  catch(err) {}
+
+			}else {
+
+					this.game_table [posx] [posy] [1] = 'open';
+					this.cases_open++;
+					if (this.game_table [posx] [posy] [0] > 0){
+						document.getElementById('l' + posx + '_' + 'c' + posy).innerHTML = this.game_table[posx][posy][0];
+					}else{
+						document.getElementById('l' + posx + '_' + 'c' + posy).innerHTML = '&nbsp;';
+					}
+
+					document.getElementById('l' + posx + '_' + 'c' + posy).classList.add('game_case_o');
+			}
+
+		}
+
+	}
 }
 
 
