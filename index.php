@@ -22,8 +22,8 @@
     <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
     <link href="https://fonts.googleapis.com/css2?family=Cookie&family=Open+Sans:ital,wght@1,300&family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="style.css"> -->
-    <link rel="stylesheet" href="style.min.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="style.min.css"> -->
 
 </head>
 <body class="container-fluid px-0 mx-0 text-center">
@@ -181,9 +181,9 @@
 <section id="labels_end" class="">
     <!-- Pop-ups de résultat du jeu -->
     <!-- game result pop-ups -->
-    <div id="label_loose" class="text-center mx-auto text-danger mt-4 px-3 pb-3">
+    <div id="label_loose" class="text-center mx-auto text-danger px-3 pb-4">
         Perdu!!
-        <div id="" class="text-center mx-auto mt-2">
+        <div id="" class="text-center mx-auto mt-1">
             <form action="#" method="post" id="form_new_game_loss" class="container">
                 <input type="hidden" id="lines_game" name="lines_game" value="<?= $_POST['lines_game']?>">
                 <input type="hidden" id="columns_game" name="columns_game" value="<?= $_POST['columns_game']?>">
@@ -193,9 +193,9 @@
         </div>
     </div>
 
-    <div id="label_win" class="text-center mx-auto text-success mt-4 px-3 pb-3">
+    <div id="label_win" class="text-center mx-auto text-success px-3 pb-4">
         Gagné!!
-        <div id="" class="text-center mx-auto mt-2">
+        <div id="" class="text-center mx-auto mt-1">
             <form action="#" method="post" id="form_new_game_win" class="container">
                 <input type="hidden" id="lines_game" name="lines_game" value="<?= $_POST['lines_game']?>">
                 <input type="hidden" id="columns_game" name="columns_game" value="<?= $_POST['columns_game']?>">
@@ -232,10 +232,10 @@
     <img id ="bg_9" src="" class="img-fluid image_background">
     <img id ="bg_10" src="" class="img-fluid image_background">
 
-<!-- <script src="class_app.js"></script>
-<script src="app.js"></script> -->
-<script src="class_app.min.js"></script>
-<script src="app.min.js"></script>
+<script src="class_app.js"></script>
+<script src="app.js"></script>
+<!-- <script src="class_app.min.js"></script>
+<script src="app.min.js"></script> -->
 
 
 </body>

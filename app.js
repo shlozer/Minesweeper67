@@ -115,7 +115,7 @@ window.addEventListener('load', () =>{
 
 	    // console.log(listePhotos);
 			for (var i = 0; i < 10; i++) {
-				img_bg[i].setAttribute("src", listePhotos.results[i].urls.full);
+				img_bg[i].setAttribute("src", listePhotos.results[i].urls.regular);
 			}
 
 	});

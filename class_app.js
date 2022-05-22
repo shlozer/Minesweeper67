@@ -56,7 +56,9 @@ class Demineur {
 	gridEventsCreation (){
 		for (let i = 0; i< this.lines; i++) {
 	    for(let j = 0; j< this.columns; j++) {
-	        document.getElementById('l' + i + '_' + 'c' + j).addEventListener('click', () =>{
+	    	var actual_case = document.getElementById('l' + i + '_' + 'c' + j);
+
+	        actual_case.addEventListener('click', () =>{
 
 	        	if (!this.first_click){
 
@@ -83,11 +85,29 @@ class Demineur {
 	        		this.winningDisplay();
 	        	}
 				// console.log(this.game_table[i][j]);
-	    	})
+	    		})
+
+// rajout fonction click droit pour flag 20220516	        
+	        actual_case.addEventListener('contextmenu', (ev) =>{
+
+	        	ev.preventDefault();
+
+	        	if (this.game_table[i][j][1]  == 'closed'){
+	        		this.game_table[i][j][1]  = 'flagged';
+	        		document.getElementById('l' + i + '_' + 'c' + j).classList.add('game_case_flag');
+
+	      		}else{
+	      			if (this.game_table[i][j][1]  == 'flagged'){
+		        		this.game_table[i][j][1]  = 'closed';
+	      				document.getElementById('l' + i + '_' + 'c' + j).classList.remove('game_case_flag');
+	      			}
+	      		}
+	      		// ,false
+		      });
 			}
 		}
-
 	}
+
 // Positionnement des mines au hasard
 // affichage des mines dans les cases adjacentes
 // random positioning
@@ -172,7 +192,7 @@ class Demineur {
 					document.getElementById('l' + i + '_' + 'c' + j).innerHTML = '&nbsp;';
 
 				}
-
+				try  { document.getElementById('l' + i + '_' + 'c' + j).classList.remove('game_case_flag');} 	catch(err) {}
 				document.getElementById('l' + i + '_' + 'c' + j).classList.add('game_case_o');
 			}
 		}
@@ -199,6 +219,7 @@ class Demineur {
 
 			this.game_table [posx] [posy] [1] = 'open';
 			this.cases_open++;
+			try  { document.getElementById('l' + posx + '_' + 'c' + posy).classList.remove('game_case_flag');} 	catch(err) {}
 			document.getElementById('l' + posx + '_' + 'c' + posy).innerHTML = '&nbsp;';
 			document.getElementById('l' + posx + '_' + 'c' + posy).classList.add('game_case_o');
 
@@ -221,7 +242,7 @@ class Demineur {
 				}else{
 					document.getElementById('l' + posx + '_' + 'c' + posy).innerHTML = '&nbsp;';
 				}
-
+				try  { document.getElementById('l' + posx + '_' + 'c' + posy).classList.remove('game_case_flag');} 	catch(err) {}
 				document.getElementById('l' + posx + '_' + 'c' + posy).classList.add('game_case_o');
 			}
 		}
@@ -230,11 +251,12 @@ class Demineur {
 
 	searchAlgo(posx, posy){
 		// console.log(posx, posy, this.game_table [posx] [posy] [0], this.game_table [posx] [posy] [1]);
-		if (this.game_table [posx] [posy] [1] == 'closed'){
+		if (this.game_table [posx] [posy] [1] == 'closed' || this.game_table [posx] [posy] [1] == 'flagged'){
 			if (this.game_table [posx] [posy] [0] == 0 ){
 
 				this.game_table [posx] [posy] [1] = 'open';
 				this.cases_open++;
+				try  { document.getElementById('l' + posx + '_' + 'c' + posy).classList.remove('game_case_flag');} 	catch(err) {}
 				document.getElementById('l' + posx + '_' + 'c' + posy).innerHTML = '&nbsp;';
 				document.getElementById('l' + posx + '_' + 'c' + posy).classList.add('game_case_o');
 
@@ -251,12 +273,12 @@ class Demineur {
 
 					this.game_table [posx] [posy] [1] = 'open';
 					this.cases_open++;
+					try  { document.getElementById('l' + posx + '_' + 'c' + posy).classList.remove('game_case_flag');} 	catch(err) {}
 					if (this.game_table [posx] [posy] [0] > 0){
 						document.getElementById('l' + posx + '_' + 'c' + posy).innerHTML = this.game_table[posx][posy][0];
 					}else{
 						document.getElementById('l' + posx + '_' + 'c' + posy).innerHTML = '&nbsp;';
 					}
-
 					document.getElementById('l' + posx + '_' + 'c' + posy).classList.add('game_case_o');
 			}
 
