@@ -24,6 +24,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Cookie&family=Open+Sans:ital,wght@1,300&family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
 <!--     <link rel="stylesheet" href="style.css"> -->
     <link rel="stylesheet" href="style.min.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4824305231318773"
+     crossorigin="anonymous"></script>
 
 </head>
 <body class="container-fluid px-0 mx-0 text-center">
